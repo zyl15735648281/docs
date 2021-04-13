@@ -1,7 +1,7 @@
 ---
 title: JavaScript基础教程
-date: 2018-09-14 00:12:00
-author: blinkfox
+date: 2021-04-13 11:01:00
+author: zyl
 img: https://statics.sh1a.qingstor.com/2018/09/14/js.jpg
 categories: 前端
 tags:
