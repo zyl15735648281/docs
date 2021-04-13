@@ -104,4 +104,4 @@ theme: hexo-theme-matery
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/zyl15735648281/docs.git
+  repo: git@github.com:zyl15735648281/docs.git
