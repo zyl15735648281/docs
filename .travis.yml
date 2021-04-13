@@ -5,14 +5,29 @@ node_js:
 cache: npm
 branches:
   only:
-    - master # build master branch only
+    - hexo # build master branch only
 script:
+  - hexo clean
   - hexo generate
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
-  on:
-    branch: master
-  local-dir: public
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "zyl"
+  - git config user.email "1352843612@qq.com"
+  - git add .
+  - git commit -a -m "Auto update docs by Travis CI."
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
+env:
+ global:
+   - GH_REF: git@github.com:zyl15735648281/docs.git
+
+# deploy:
+#   provider: pages
+#   skip-cleanup: true
+#   github-token: $GH_TOKEN
+#   keep-history: true
+#   on:
+#     branch: master
+#   local-dir: public
