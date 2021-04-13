@@ -105,3 +105,4 @@ theme: hexo-theme-matery
 deploy:
   type: git
   repo: git@github.com:zyl15735648281/docs.git
+  branch: master
